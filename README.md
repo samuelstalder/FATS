@@ -31,6 +31,10 @@
 ## Klassendiagramm
 * The classdiagramm is also on the [wiki](https://github.zhaw.ch/pm2-it19azh-ehri-fame-muon/gruppe7-Mers-projekt2-fats/wiki/Class-Diagramm).
 
+## Screenshots of the game
+![fats_gameplay_start](https://user-images.githubusercontent.com/32389364/135813109-6039d536-32e6-422c-a458-cc0350de7736.png)
+![fats_gameplay_ingame1](https://user-images.githubusercontent.com/32389364/135813226-74461755-f5a8-4a3d-85f9-5560702912f5.png)
+![fats_gameplay_ingame2](https://user-images.githubusercontent.com/32389364/135813181-b7712535-eedb-4e18-9adf-a3f5ee17abd2.png)
 
 ## 👨‍👨‍👦‍👦 Authors
 
