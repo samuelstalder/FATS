@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="creditsSubScene" prefHeight="300.0" prefWidth="300.0" stylesheets="@../../../../../StartWindow.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label id="mainLabel" alignment="CENTER" text="Credits" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+        <Label id="subLabel" alignment="CENTER" text="Artists" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0"/>
+        <Label alignment="CENTER" text="Tim Rhomberg" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0" />
+        <Label alignment="CENTER" text="Samuel Stadler" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0" />
+        <Label id="subLabel" alignment="CENTER" text="Programmers" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0"/>
+        <Label alignment="CENTER" text="Tim Rhomberg" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="125.0" />
+        <Label alignment="CENTER" text="Samuel Stadler" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="145.0" />
+        <Label alignment="CENTER" text="Adrian Eyholzer" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="165.0" />
+        <Label alignment="CENTER" text="David Mihajlovic" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="185.0" />
+    </children>
+</AnchorPane>

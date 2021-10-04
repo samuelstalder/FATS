@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import java.util.ArrayList?>
+
+<BorderPane fx:id="borderPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1000.0"
+            stylesheets="@../../../../../PlayWindow.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ch.zhaw.pm2.fats.gui.PlayWindowController">
+    <opaqueInsets>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </opaqueInsets>
+    <center>
+        <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+            <children>
+                <Canvas fx:id="landscape" height="480.0" width="640.0" />
+            </children>
+        </Pane>
+    </center>
+    <left>
+        <VBox fx:id="playerAVbox" prefHeight="550.0" prefWidth="170.0" BorderPane.alignment="CENTER">
+            <children>
+                <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="60.0" prefWidth="150.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="60.0" prefWidth="150.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label fx:id="playerALabel" text="Player A" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+                        <Slider fx:id="playerAShotStrength" showTickLabels="true" showTickMarks="true" GridPane.columnSpan="2" GridPane.rowIndex="5" GridPane.rowSpan="2" />
+                        <Label text="Shot strength" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <GridPane fx:id="playerAInventarGridPane" gridLinesVisible="true" GridPane.columnSpan="2" GridPane.rowIndex="13" GridPane.rowSpan="6">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <HBox fx:id="aBox00" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <ImageView fx:id="aImage00" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="aLabel00">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="aBox01" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                    <children>
+                                        <ImageView fx:id="aImage01" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="aLabel01">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="aBox10" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                    <children>
+                                        <ImageView fx:id="aImage10" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="aLabel10">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="aBox11" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <children>
+                                        <ImageView fx:id="aImage11" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="aLabel11">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="aBox20" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                    <children>
+                                        <ImageView fx:id="aImage20" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="aLabel20">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="aBox21" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <children>
+                                        <ImageView fx:id="aImage21" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="aLabel21">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="aBox30" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                    <children>
+                                        <ImageView fx:id="aImage30" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="aLabel30">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="aBox31" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <children>
+                                        <ImageView fx:id="aImage31" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="aLabel31">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="aBox40" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                    <children>
+                                        <ImageView fx:id="aImage40" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="aLabel40">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="aBox41" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                    <children>
+                                        <ImageView fx:id="aImage41" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="aLabel41">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <fx:define>
+                                    <ArrayList fx:id="playerAInventoryLabel">
+                                        <fx:reference source="aLabel00"/>
+                                        <fx:reference source="aLabel01"/>
+                                        <fx:reference source="aLabel10"/>
+                                        <fx:reference source="aLabel11"/>
+                                        <fx:reference source="aLabel20"/>
+                                        <fx:reference source="aLabel21"/>
+                                        <fx:reference source="aLabel30"/>
+                                        <fx:reference source="aLabel31"/>
+                                        <fx:reference source="aLabel40"/>
+                                        <fx:reference source="aLabel41"/>
+                                    </ArrayList>
+                                    <ArrayList fx:id="playerAInventoryImageView">
+                                        <fx:reference source="aImage00"/>
+                                        <fx:reference source="aImage01"/>
+                                        <fx:reference source="aImage10"/>
+                                        <fx:reference source="aImage11"/>
+                                        <fx:reference source="aImage20"/>
+                                        <fx:reference source="aImage21"/>
+                                        <fx:reference source="aImage30"/>
+                                        <fx:reference source="aImage31"/>
+                                        <fx:reference source="aImage40"/>
+                                        <fx:reference source="aImage41"/>
+                                    </ArrayList>
+                                    <ArrayList fx:id="playerAInventoryHBox">
+                                        <fx:reference source="aBox00"/>
+                                        <fx:reference source="aBox01"/>
+                                        <fx:reference source="aBox10"/>
+                                        <fx:reference source="aBox11"/>
+                                        <fx:reference source="aBox20"/>
+                                        <fx:reference source="aBox21"/>
+                                        <fx:reference source="aBox30"/>
+                                        <fx:reference source="aBox31"/>
+                                        <fx:reference source="aBox40"/>
+                                        <fx:reference source="aBox41"/>
+                                    </ArrayList>
+                                </fx:define>
+                            </children>
+                        </GridPane>
+                        <TextField fx:id="playerAShotStrengthTxt" alignment="CENTER" onKeyTyped="#changeSliderValueWithTextField" text="0" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+                        <Label text="Inventar" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="12" />
+                        <Button fx:id="playerAFire" mnemonicParsing="false" onAction="#fireButton" prefWidth="75.0" text="Fire" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="20" />
+                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                            <image>
+                                <Image url="@../items/heart.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="playerAHeart" text="100" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets right="2.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <image>
+                                <Image url="@../items/shield.png" />
+                            </image>
+                            <GridPane.margin>
+                                <Insets left="2.0" />
+                            </GridPane.margin>
+                        </ImageView>
+                        <Label fx:id="playerAArmor" text="100" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                        <Label text="Shot Angle" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                        <Slider fx:id="playerAShotAngle" max="360.0" showTickLabels="true" showTickMarks="true" GridPane.columnSpan="2" GridPane.rowIndex="9" GridPane.rowSpan="2" />
+                        <TextField fx:id="playerAShotAngleTxt" alignment="CENTER" onKeyTyped="#changeSliderValueWithTextField" text="0" GridPane.columnSpan="2" GridPane.rowIndex="11" />
+                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+                            <image>
+                                <Image url="@../items/fuel.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="playerAFuel" text="100" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets right="2.0" />
+                            </GridPane.margin>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </VBox.margin>
+                </GridPane>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </BorderPane.margin>
+        </VBox>
+    </left>
+    <right>
+        <VBox fx:id="playerBVbox" prefHeight="200.0" prefWidth="170.0" BorderPane.alignment="CENTER">
+            <children>
+                <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="60.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="60.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label fx:id="playerBLabel" text="Player B" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+                        <Slider fx:id="playerBShotStrength" showTickLabels="true" showTickMarks="true" GridPane.columnSpan="2" GridPane.rowIndex="5" GridPane.rowSpan="2" />
+                        <Label text="Shot strength" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <GridPane fx:id="playerBInventarGridPane" gridLinesVisible="true" GridPane.columnSpan="2" GridPane.rowIndex="13" GridPane.rowSpan="6">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <HBox fx:id="bBox00" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <ImageView fx:id="bImage00" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="bLabel00">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="bBox01" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                    <children>
+                                        <ImageView fx:id="bImage01" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="bLabel01">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="bBox10" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                    <children>
+                                        <ImageView fx:id="bImage10" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="bLabel10">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="bBox11" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <children>
+                                        <ImageView fx:id="bImage11" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="bLabel11">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="bBox20" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                    <children>
+                                        <ImageView fx:id="bImage20" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="bLabel20">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="bBox21" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <children>
+                                        <ImageView fx:id="bImage21" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="bLabel21">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="bBox30" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                    <children>
+                                        <ImageView fx:id="bImage30" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="bLabel30">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="bBox31" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <children>
+                                        <ImageView fx:id="bImage31" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="bLabel31">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="bBox40" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                    <children>
+                                        <ImageView fx:id="bImage40" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="bLabel40">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="bBox41" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                    <children>
+                                        <ImageView fx:id="bImage41" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#gridClicked" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>2</top>
+                                                    <left>5</left>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="bLabel41">
+                                            <HBox.margin>
+                                                <Insets>
+                                                    <top>10</top>
+                                                    <right>5</right>
+                                                </Insets>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <fx:define>
+                                    <ArrayList fx:id="playerBInventoryLabel">
+                                        <fx:reference source="bLabel00"/>
+                                        <fx:reference source="bLabel01"/>
+                                        <fx:reference source="bLabel10"/>
+                                        <fx:reference source="bLabel11"/>
+                                        <fx:reference source="bLabel20"/>
+                                        <fx:reference source="bLabel21"/>
+                                        <fx:reference source="bLabel30"/>
+                                        <fx:reference source="bLabel31"/>
+                                        <fx:reference source="bLabel40"/>
+                                        <fx:reference source="bLabel41"/>
+                                    </ArrayList>
+                                    <ArrayList fx:id="playerBInventoryImageView">
+                                        <fx:reference source="bImage00"/>
+                                        <fx:reference source="bImage01"/>
+                                        <fx:reference source="bImage10"/>
+                                        <fx:reference source="bImage11"/>
+                                        <fx:reference source="bImage20"/>
+                                        <fx:reference source="bImage21"/>
+                                        <fx:reference source="bImage30"/>
+                                        <fx:reference source="bImage31"/>
+                                        <fx:reference source="bImage40"/>
+                                        <fx:reference source="bImage41"/>
+                                    </ArrayList>
+                                    <ArrayList fx:id="playerBInventoryHBox">
+                                        <fx:reference source="bBox00"/>
+                                        <fx:reference source="bBox01"/>
+                                        <fx:reference source="bBox10"/>
+                                        <fx:reference source="bBox11"/>
+                                        <fx:reference source="bBox20"/>
+                                        <fx:reference source="bBox21"/>
+                                        <fx:reference source="bBox30"/>
+                                        <fx:reference source="bBox31"/>
+                                        <fx:reference source="bBox40"/>
+                                        <fx:reference source="bBox41"/>
+                                    </ArrayList>
+                                </fx:define>
+                            </children>
+                        </GridPane>
+                        <TextField fx:id="playerBShotStrengthTxt" alignment="CENTER" onKeyTyped="#changeSliderValueWithTextField" text="0" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+                        <Label text="Inventar" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="12" />
+                        <Button fx:id="playerBFire" mnemonicParsing="false" onAction="#fireButton" prefWidth="75.0" text="Fire" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="20" />
+                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                            <image>
+                                <Image url="@../items/heart.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="playerBHeart" text="100" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                            <padding>
+                                <Insets right="2.0" />
+                            </padding>
+                            <GridPane.margin>
+                                <Insets right="2.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <image>
+                                <Image url="@../items/shield.png" />
+                            </image>
+                            <GridPane.margin>
+                                <Insets left="2.0" />
+                            </GridPane.margin>
+                        </ImageView>
+                        <Label fx:id="playerBArmor" text="100" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets right="2.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Slider fx:id="playerBShotAngle" max="360.0" showTickLabels="true" showTickMarks="true" GridPane.columnSpan="2" GridPane.rowIndex="9" GridPane.rowSpan="2" />
+                        <Label text="Shot Angle" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                        <TextField fx:id="playerBShotAngleTxt" alignment="CENTER" onKeyTyped="#changeSliderValueWithTextField" text="0" GridPane.columnSpan="2" GridPane.rowIndex="11" />
+                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+                            <Image url="@../items/fuel.png"/>
+                        </ImageView>
+                        <Label fx:id="playerBFuel" text="100" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                            <padding>
+                                <Insets right="2.0" />
+                            </padding>
+                            <GridPane.margin>
+                                <Insets right="2.0" />
+                            </GridPane.margin>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </VBox.margin>
+                </GridPane>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </BorderPane.margin>
+        </VBox>
+    </right>
+    <top>
+        <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="fatsLabel" text="FATS" />
+                <Label fx:id="currentPlayer" text="Current Player" />
+            </children>
+        </VBox>
+    </top>
+    <bottom>
+        <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="errorMessages" />
+            </children>
+        </VBox>
+    </bottom>
+</BorderPane>

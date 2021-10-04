@@ -1,0 +1,7 @@
+heart.png 1 HEALTH
+shield.png 1 ARMOR
+tank.png -1 STANDARD
+nuclear-bomb.png 2 NUCLEAR
+poison.png 2 CHEMICAL
+cluster-bomb.png 2 CLUSTER
+fuel.png 100 FUEL

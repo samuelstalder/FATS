@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="playSubScene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.zhaw.pm2.fats.gui.PlaySubSceneController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Label text="Name of Player A" GridPane.halignment="CENTER" />
+        <TextField fx:id="playerAName" onKeyTyped="#checkPlayerA" text="PlayerA" GridPane.columnIndex="1" />
+        <Label text="Name of Player B" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+        <TextField fx:id="playerBName" onKeyTyped="#checkPlayerB" text="PlayerB" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <RadioButton fx:id="sand" mnemonicParsing="false" text="Sand" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <graphic>
+                <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../items/desert.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </RadioButton>
+        <RadioButton fx:id="earth" mnemonicParsing="false" text="Earth" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+            <graphic>
+                <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../items/world.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </RadioButton>
+        <RadioButton fx:id="rock" mnemonicParsing="false" text="Rock" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <graphic>
+                <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../items/stone.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </RadioButton>
+        <TextFlow fx:id="errorMessages" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+        <Button fx:id="playGame" disable="true" mnemonicParsing="false" onAction="#startGame" text="Play Game" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+    </children>
+</GridPane>

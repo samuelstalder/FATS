@@ -1,0 +1,58 @@
+#welcomeLabel {
+    -fx-font-family: Avenir Book;
+    -fx-font-size: 24;
+}
+
+.radio-button, .text-area, .label, .button {
+    -fx-font-family: Avenir Book;
+    -fx-font-size: 15;
+}
+
+.button {
+    -fx-color-one: #d6d6d6;
+    -fx-color-two: #d9d9d9;
+    -fx-color-three: #f6f6f6;
+
+    -fx-background-color:
+            linear-gradient(#f2f2f2, -fx-color-one),
+            linear-gradient(#fcfcfc 0%, -fx-color-two 20%, -fx-color-one 100%),
+            linear-gradient(#dddddd 0%, -fx-color-three 50%);
+    -fx-background-radius: 5em;
+    -fx-background-insets: 0, 1, 2;
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+
+.button:hover {
+    -fx-color-one: #33cfa2;
+    -fx-color-two: #33cfa2;
+    -fx-color-three: #33cfa2;
+}
+
+.button:pressed {
+    -fx-color-one: #04B1BB;
+    -fx-color-two: #04B1BB;
+    -fx-color-three: #04B1BB;
+}
+
+#playerALabel, #playerBLabel {
+    -fx-font-family: arial;
+    -fx-font-weight: Bold;
+    -fx-font-size: 13;
+}
+
+#mainLabel {
+    -fx-font-family: arial;
+    -fx-font-weight: Bold;
+    -fx-font-size: 24;
+}
+
+#subLabel {
+    -fx-font-family: arial;
+    -fx-font-weight: Bold;
+    -fx-font-size: 13;
+}
+
+.label {
+    -fx-font-family: arial;
+    -fx-font-size: 13;
+}

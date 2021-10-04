@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="helpSubScene" prefHeight="300.0" prefWidth="300.0" stylesheets="@../../../../../StartWindow.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.zhaw.pm2.fats.gui.HelpSubSceneController">
+    <children>
+        <Label id="mainLabel" alignment="CENTER" text="Help" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+        <Label alignment="CENTER" text="Look for more help at the wiki page of the Project." AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+      <Hyperlink alignment="CENTER" layoutX="119.0" layoutY="94.0" onAction="#openWiki" text="Github Wiki" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,82 @@
+#playerAFire {
+    -fx-color-one: #d6d6d6;
+    -fx-color-two: #d9d9d9;
+    -fx-color-three: #f6f6f6;
+
+    -fx-background-color:
+            linear-gradient(#f2f2f2, -fx-color-one),
+            linear-gradient(#fcfcfc 0%, -fx-color-two 20%, -fx-color-one 100%),
+            linear-gradient(#dddddd 0%, -fx-color-three 50%);
+    -fx-background-radius: 2em;
+    -fx-background-insets: 0, 1, 2;
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+
+#playerAFire:hover {
+    -fx-color-one: #10E5F1;
+    -fx-color-two: #10E5F1;
+    -fx-color-three: #10E5F1;
+}
+
+#playerAFire:pressed {
+    -fx-color-one: #04B1BB;
+    -fx-color-two: #04B1BB;
+    -fx-color-three: #04B1BB;
+}
+
+#playerBFire {
+    -fx-color-one: #d6d6d6;
+    -fx-color-two: #d9d9d9;
+    -fx-color-three: #f6f6f6;
+
+    -fx-background-color:
+            linear-gradient(#f2f2f2, -fx-color-one),
+            linear-gradient(#fcfcfc 0%, -fx-color-two 20%, -fx-color-one 100%),
+            linear-gradient(#dddddd 0%, -fx-color-three 50%);
+    -fx-background-radius: 2em;
+    -fx-background-insets: 0, 1, 2;
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+
+#playerBFire:hover {
+    -fx-color-one: #54CD3F;
+    -fx-color-two: #54CD3F;
+    -fx-color-three: #54CD3F;
+}
+
+#playerBFire:pressed {
+    -fx-color-one: #36AC21;
+    -fx-color-two: #36AC21;
+    -fx-color-three: #36AC21;
+}
+
+#playerBVbox, #playerAVbox {
+    -fx-border-radius: 2em;
+}
+
+#playerAVbox {
+    -fx-border-color: #10E5F1;
+}
+
+#playerBVbox {
+    -fx-border-color: #54CD3F;
+}
+
+#playerALabel, #playerBLabel {
+    -fx-font-family: arial;
+    -fx-font-weight: Bold;
+    -fx-font-size: 24;
+}
+
+#fatsLabel, #currentPlayer {
+    -fx-font-family: Avenir Book;
+}
+
+#fatsLabel {
+    -fx-font-size: 24;
+}
+
+#currentPlayer {
+    -fx-font-family: Avenir Book;
+    -fx-font-size: 14;
+}
